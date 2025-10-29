@@ -6,7 +6,7 @@ from flask_login import current_user, login_required
 from models import Dataset
 from auth import auth_bp
 import pandas as pd
-# REMOVED: from ydata_profiling import ProfileReport
+from ydata_profiling import ProfileReport
 from datetime import datetime
 
 app.register_blueprint(auth_bp, url_prefix="/auth")
@@ -82,9 +82,6 @@ def profile_dataset(dataset_id):
     
     if not dataset.profile_generated:
         try:
-            # LAZY IMPORT - moved inside the function
-            from ydata_profiling import ProfileReport
-            
             filepath = os.path.join(app.config['UPLOAD_FOLDER'], dataset.filename)
             
             file_ext = dataset.original_filename.lower().rsplit('.', 1)[-1]
