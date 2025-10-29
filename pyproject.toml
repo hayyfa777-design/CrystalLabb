@@ -4,6 +4,8 @@ version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.11"
 dependencies = [
+    "setuptools>=58.0.0",
+    "distribute",
     "flask>=3.1.2",
     "flask-sqlalchemy>=3.1.1",
     "openpyxl>=3.1.5",
@@ -11,6 +13,7 @@ dependencies = [
     "psycopg2-binary>=2.9.10",
     "python-dotenv>=1.1.1",
     "ydata-profiling>=4.17.0",
+    "pandas-profiling>=3.6.6",  # ADD THIS AS FALLBACK
     "flask-login>=0.6.3",
     "xlrd>=2.0.2",
     "sqlalchemy>=2.0.43",
