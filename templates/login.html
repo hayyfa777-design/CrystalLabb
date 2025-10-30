@@ -29,8 +29,8 @@
             flex: 1;
             position: relative;
             overflow: hidden;
-            background: url("/groundImage.png") 
-                        no-repeat center center;
+            background: url("{{ url_for('static', filename='groundImage.png') }}") no-repeat center center;
+
             background-size: cover;
         }
 
