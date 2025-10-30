@@ -25,3 +25,10 @@ dependencies = [
   "pandas==2.2.2",
   "ydata-profiling>=4.17.0"
 ]
+
+[tool.setuptools]
+py-modules = ["app", "auth", "forms", "main", "models", "routes"]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+exclude = ["static", "templates"]
